@@ -10,3 +10,5 @@ export const fetchPosts = async () => {
 export const createPostBack = (newPost) => axios.post(url, newPost);
 export const updatePostApi = async (id, newPost) =>
   await axios.patch(`${url}/${id}`, newPost.postData);
+
+export const deletePostApi = async (id) => await axios.delete(`${url}/${id}`);

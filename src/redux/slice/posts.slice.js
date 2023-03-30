@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createPostBack, updatePostApi } from "../../api/fetchPosts";
+import {
+  createPostBack,
+  deletePostApi,
+  updatePostApi,
+} from "../../api/fetchPosts";
 
 let postsSlice = createSlice({
   name: "posts",
@@ -13,13 +17,18 @@ let postsSlice = createSlice({
       return (state = action.payload);
     },
     updatePost(state, action) {
-      let id = action.payload.currentId
-      let post = action.payload
-      updatePostApi(id,post);
+      let id = action.payload.currentId;
+      let post = action.payload;
+      updatePostApi(id, post);
       return state;
+    },
+    deletePost(state, action) {
+      let { data } = deletePostApi(action.payload);
+      console.log(data, action.payload);
+      return (state = state.filter((i) => i._id !== action.payload));
     },
   },
 });
 
 export default postsSlice.reducer;
-export const { createPost, fetchAllPosts, updatePost } = postsSlice.actions;
+export const { createPost, fetchAllPosts, updatePost,deletePost } = postsSlice.actions;
