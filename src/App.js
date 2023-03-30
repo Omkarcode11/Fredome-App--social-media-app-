@@ -24,15 +24,15 @@ function App() {
   return (
     <Container maxWidth="lg">
       <AppBar position="static" className="appBar" color="inherit">
-        <Typography className="heading" variant="h2" align="center">
-          Memories
-        </Typography>
         <img
           className="image"
-          src="https://picsum.photos/200/300"
+          src="./assets/logo.png"
           alt="memories"
-          height="60"
+          height="40"
         />
+        <Typography color="crimson" className="heading"  align="center">
+          Memories
+        </Typography>
       </AppBar>
       <Grow in>
         <Container>

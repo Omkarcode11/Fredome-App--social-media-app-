@@ -12,3 +12,6 @@ export const updatePostApi = async (id, newPost) =>
   await axios.patch(`${url}/${id}`, newPost.postData);
 
 export const deletePostApi = async (id) => await axios.delete(`${url}/${id}`);
+
+
+export const likePostApi = async (id) => await axios.patch(`${url}/${id}/likePost`)

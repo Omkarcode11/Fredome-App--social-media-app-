@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   createPostBack,
   deletePostApi,
+  likePostApi,
   updatePostApi,
 } from "../../api/fetchPosts";
 
@@ -27,8 +28,15 @@ let postsSlice = createSlice({
       console.log(data, action.payload);
       return (state = state.filter((i) => i._id !== action.payload));
     },
+    likePost(state, action) {
+      likePostApi(action.payload);
+      let index = state.findIndex((id) => id._id === action.payload);
+      state[index].likeCount++;
+      return state;
+    },
   },
 });
 
 export default postsSlice.reducer;
-export const { createPost, fetchAllPosts, updatePost,deletePost } = postsSlice.actions;
+export const { createPost, fetchAllPosts, updatePost, deletePost, likePost } =
+  postsSlice.actions;

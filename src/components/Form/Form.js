@@ -90,7 +90,7 @@ function Form({ currentId, setCurrentId }) {
           fullWidth
           value={postData.tags}
           onChange={(e) =>
-            setPostsData({ ...postData, tags: e.target.value.split(" ") })
+            setPostsData({ ...postData, tags: e.target.value.split(",") })
           }
         />
 
