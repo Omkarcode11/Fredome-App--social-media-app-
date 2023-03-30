@@ -1,0 +1,50 @@
+.posts-image>img{
+    margin: 0px 50%;
+    transform: translate(-50%);
+    height: 10rem;
+    object-fit:cover;
+    filter: brightness(0.7);
+    
+}
+
+.posts-image{
+    background-color: gray;
+    height: 10rem;
+    width: 100%;
+}
+
+.card{
+    border-radius: 1.5rem !important;
+    position: relative !important;
+    /* height: 20rem !important; */
+}
+
+.overlay{
+    /* background-color: rgb(177, 177, 177); */
+    position:absolute !important;
+    top:1rem !important;
+    left :1rem !important;
+    color: white;
+    font-weight: 500;
+}
+
+.details-tag{
+    padding: 1rem;
+}
+
+.title-post{
+    margin-top: 0 !important;
+}
+
+.postCardActions{
+    margin: 0.2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.overlay2{
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    transform: scale(1.8);
+}

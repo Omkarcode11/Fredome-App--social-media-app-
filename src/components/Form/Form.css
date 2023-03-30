@@ -1,0 +1,20 @@
+.submit-Button{
+    margin-bottom: 0.3rem !important;
+}
+
+.form > * {
+    border: none !important;
+    margin-bottom: 0.5rem !important;
+    width: 90% !important;  
+}
+
+.form{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items: center !important;
+}
+
+.form-heading{
+    text-align: center !important;
+    padding: 0.5rem !important;
+}
